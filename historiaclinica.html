@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sección para ingresar datos filiatorios, antecedentes patológicos y hábitos tóxicos, así como revisar el historial médico">
+    <meta name="keywords" content="PACIENTE, HISTORIA CLÍNICA, ANTECEDENTES, HÁBITOS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>DM Historia Clínica</title>
+</head>
+
+<body>
+    <header>
+        <!--Barra de navegacion-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="index.html">
+                    <div class="title">
+                        <h1
+                            class="animate__animated animate__pulse animate__repeat-2 animate__fast 500ms display-4 text-white">
+                            DigitalMed</h1>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" a href="historiaclinica.html"
+                                data-bs-toggle="dropdown">Historia Clínica</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="historiaclinica.html#ingresaDatos">Ingresar datos</a>
+                                </li>
+                                <li><a class="dropdown-item" href="historiaclinica.html#tuHistoria">Tu historia</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" a href="estudios.html"
+                                data-bs-toggle="dropdown">Estudios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="estudios.html#exComp">Diagnóstico por imágenes</a>
+                                </li>
+                                <li><a class="dropdown-item" href="estudios.html#exComp">Laboratorio</a></li>
+                                <li><a class="dropdown-item" href="estudios.html#exComp">Endoscopia</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" a href="obrasocial.html" data-bs-toggle="dropdown">Obra
+                                social</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="obrasocial.html#obraSocial">Listado de Obras
+                                        sociales</a></li>
+                                <li><a class="dropdown-item" href="obrasocial.html#infoObra">Información</a></li>
+                                <li><a class="dropdown-item" href="obrasocial.html#supports">Apoyo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" a href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Buscar">
+                        <button class="btn btn-light" type="button">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Historia Clínica</li>
+            </ol>
+        </nav>
+        <h2>Ingresa tu Historia Clínica</h2>
+        <!--Formulario para completar Historia clinica-->
+        <form class="row g-3 formulario">
+            <div class="col-md-6">
+                <label for="inputname" class="form-label">Nombre y Apellido</label>
+                <input type="name" class="form-control" id="inputname">
+            </div>
+            <div class="col-md-6">
+                <label for="inputdate" class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="inputdate">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Domicilio</label>
+                <input type="text" class="form-control" id="inputAddress">
+            </div>
+            <div class="col-12">
+                <label for="inputEmail4" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputSex" class="form-label">Sexo</label>
+                <select id="inputSex" class="form-select">
+                    <option selected>Femenino</option>
+                    <option>Masculino</option>
+                    <option>No especifica</option>
+                </select>
+            </div>
+            <h3 class="formulario__antecedentes historia--antecedentes">Antecedentes personales</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Hipertensión Arterial
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Diabetes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Artrosis
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Celiaquía
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Dermatitis
+                </label>
+            </div>
+            <h3 class="formulario__habitos historia--habitos">Hábitos tóxicos</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Tabaquismo
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Alcohol
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Drogas
+                </label>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Ingresar HC</button>
+            </div>
+        </form>
+        </section>
+        <!--Espacio de texto donde apareceran los datos del paciente-->
+        <article class="tuHistoria " id="tuHistoria">
+            <h3 class="tuHistoria__title historia--tuHistoria">Tu Historia</h3>
+            <p class="tuHistoria__text">El Hospital de la Baxada lleva un registro de archivos electrónicos
+                estandarizados de las historias
+                clínicas de las personas que son atendidas en el nosocomio.
+                La historia clínica ya no es lo que era. Aquel papel escrito a mano con los datos del paciente,
+                diagnósticos, prescripciones y tratamientos está siendo reemplazado por la digitalización estandarizada
+                que permite el acceso a la información de los equipos médicos y de los pacientes desde diferentes
+                dispositivos electrónicos.</p>
+            <p class="tuHistoria__text">La historia clínica se origina con el primer episodio de enfermedad o control de
+                salud en el que se
+                atiende al paciente, ya sea en el hospital o en el centro de atención primaria, o en un consultorio
+                médico. La historia clínica está incluida dentro del campo de la semiología clínica.
+            </p>
+        </article>
+    </main>
+    <footer class="text-center text-white">
+        <div class="container">
+            <section class="mt-5">
+                <!-- Section: Links -->
+                <div class="row text-center d-flex justify-content-center pt-5">
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="historiaclinica.html" class="text-white">Historias</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="estudios.html" class="text-white">Estudios</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="obrasocial.html" class="text-white">Obra social</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="contacto.html" class="text-white">Contacto</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="sitemap.html" class="text-white">Mapa del sitio</a>
+                        </h6>
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-5" />
+
+            <!-- Section: Social -->
+            <section class="text-center mb-5">
+                <a href="https://www.facebook.com/" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.google.com/" class="text-white me-4">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </section>
+            <!-- Section: Social -->
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-white" href="#">Deganutti Rodrigo</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

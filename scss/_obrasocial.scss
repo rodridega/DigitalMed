@@ -1,0 +1,34 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.obraSocial {
+  ul {
+    list-style: none;
+  }
+}
+
+.supports {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.supports__socialSup {
+  width: 200px;
+  height: 200px;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+.supports__socialSup:hover {
+  transform: scale(1.1);
+}

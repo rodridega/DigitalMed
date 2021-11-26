@@ -1,0 +1,204 @@
+/*Color Palette
+#193498 Egyptian blue
+#113CFC Blue RYB
+#1290CA Blue NSC
+#DDF7F8 Light Cyan
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+header {
+  background-color: #193498;
+}
+
+.breadcrumb li {
+  font-size: 20px;
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #193498;
+}
+
+p {
+  padding: 5px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  background-color: #193498;
+}
+
+footer i:hover {
+  color: #1290ca;
+}
+
+.carousel-caption {
+  background-color: black;
+  opacity: 0.7;
+}
+
+.videosSalud__iframe {
+  width: 70%;
+  margin: 10px 50px;
+  border: 5px solid #1290ca;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
+}
+
+.carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.exComp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.exComp__photoStudy {
+  width: 250px;
+  height: 250px;
+  border: 5px solid #ddf7f8;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.obraSocial ul {
+  list-style: none;
+}
+
+.supports {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.supports__socialSup {
+  width: 200px;
+  height: 200px;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.supports__socialSup:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .carousel img {
+    height: 400px;
+  }
+  #videosSalud {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .supports {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #sectionCarrousel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .carrousel {
+    margin: 30px 15px;
+  }
+  #videosSalud {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  iframe {
+    width: 40%;
+  }
+  .exComp {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
