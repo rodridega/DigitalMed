@@ -1,42 +1,47 @@
 @media only screen and (min-width: 768px) {
-    .carousel {
-      img {
-        height: 400px;
-      }
+  .carousel {
+    img {
+      height: 400px;
     }
-  
-    #videosSalud {
+  }
+
+  #videosSalud {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .supports {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #sectionCarrousel {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .carrousel {
+    margin: 30px 15px;
+  }
+
+  #videosSalud {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  iframe {
+    width: 40%;
+  }
+
+  .exComp {
+    flex-direction: row;
+    height: 24rem;
+    div {
       display: flex;
       flex-direction: column;
-      align-items: center;
-    }
-  
-    .supports {
-      flex-direction: row;
-    }
-  }
-  
-  @media only screen and (min-width: 1200px) {
-    #sectionCarrousel {
-      flex-direction: row;
-      justify-content: center;
-    }
-  
-    .carrousel {
-      margin: 30px 15px;
-    }
-  
-    #videosSalud {
-      flex-direction: row;
       justify-content: space-evenly;
     }
-  
-    iframe {
-      width: 40%;
-    }
-  
-    .exComp {
-      flex-direction: row;
-    }
   }
-  
+}

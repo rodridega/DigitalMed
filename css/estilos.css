@@ -21,7 +21,7 @@ header {
 }
 
 .breadcrumb li {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .breadcrumb li a {
@@ -78,6 +78,10 @@ footer i:hover {
   text-align: center;
 }
 
+.exComp img {
+  margin: 1rem;
+}
+
 .exComp__photoStudy {
   width: 250px;
   height: 250px;
@@ -85,6 +89,15 @@ footer i:hover {
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px black;
           box-shadow: 0px 0px 10px black;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
+}
+
+.exComp__photoStudy:hover {
+  -webkit-box-shadow: 0px 0px 30px #113cfc;
+          box-shadow: 0px 0px 30px #113cfc;
 }
 
 @-webkit-keyframes fade {
@@ -199,6 +212,19 @@ footer i:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 24rem;
+  }
+  .exComp div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
