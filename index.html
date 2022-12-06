@@ -82,7 +82,7 @@
     </header>
 
     <main class="container">
-        
+
         <section>
             <!--Carrusel-->
             <h2>Nuestras instalaciones</h2>
@@ -260,11 +260,86 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            Repositorio: 
+            Repositorio:
             <a class="text-white" href="https://github.com/rodridega"> Deganutti Rodrigo</a>
         </div>
         <!-- Copyright -->
     </footer>
+    <button class="openbot"> <span> Calcular remodelación</span> <img
+            src="https://res.cloudinary.com/drox3uxpf/image/upload/v1665673053/Landbot/Vector_lcha18.svg" /> </button>
+    <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <script>
+        var myLandbotpop = new Landbot.Popup({
+            configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1410889-UA0Q8HPU4SH2FEJ0/index.json'
+        });
+        var buttonOpen = document.getElementsByClassName("openbot")[0];
+        buttonOpen.addEventListener('click', async (event) => {
+            event.preventDefault();
+            myLandbotpop.open()
+            try {
+                await fetch("https://chatbot-b2b.onrender.com/landbot", {
+                    method: 'POST',
+                    body: JSON.stringify({ "href": window.location.href }),
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                    }
+                })
+            } catch (error) {
+                console.log(error);
+            }
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        .openbot {
+            position: fixed;
+            width: 100%;
+            height: 45px;
+            left: 0px;
+            bottom: 0px;
+            background: #EBC991 !important;
+            box-shadow: 0px 63px 35px rgba(0, 0, 0, 0.09);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            z-index: 99999;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .openbot:hover {
+            transform: scale(1.1);
+        }
+
+        .openbot span {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 13px;
+            color: #203F3C !important;
+            margin-right: 1rem;
+        }
+
+        .openbot img {
+            width: 2rem;
+        }
+
+        @media screen and (min-width: 758px) {
+            .openbot {
+                width: 15%;
+                height: 35px;
+                top: auto;
+                bottom: 0px;
+                left: 43%;
+                border-radius: 10px 10px 0px 0px;
+            }
+        }
+    </style>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
